@@ -1,0 +1,11 @@
+# Exercise 12.2
+
+# Start Ubuntu container interactively
+docker container run -it ubuntu bash
+
+# Inside the container:
+mkdir -p /usr/src/app
+echo "console.log('Hello')" > /usr/src/app/index.js
+
+# Exit container
+exit
