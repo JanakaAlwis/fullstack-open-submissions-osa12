@@ -1,0 +1,13 @@
+# Exercise 12.3
+
+# Start the container
+docker start -i zealous_wescoff
+
+# Inside the container:
+apt-get update
+apt-get install -y nano
+nano /usr/src/app/index.js
+# Edited the file to contain: console.log('Hello World')
+
+# Exit the container
+exit
