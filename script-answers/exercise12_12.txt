@@ -1,0 +1,7 @@
+# Exercise 12.12
+
+- Copied frontend from exercise12_11
+- Created backend with simple Express API and static file serving
+- Built frontend with React, served using nginx
+- Used Docker Compose to run both containers
+- Verified output on http://localhost and /api/hello
