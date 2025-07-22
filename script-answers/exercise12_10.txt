@@ -1,0 +1,17 @@
+# Exercise 12.10
+
+Used Docker volumes to mount local source code into the container.
+
+Modified `index.js` on the host and saw changes in the container without rebuilding the image.
+
+Dockerfile installs dependencies, while docker-compose mounts the source code:
+
+docker-compose.yml:
+  volumes:
+    - .:/usr/src/app
+
+Command used:
+docker compose up --build
+
+Result:
+Changes in host code reflected in container after restart.
