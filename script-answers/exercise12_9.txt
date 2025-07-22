@@ -1,0 +1,13 @@
+# Exercise 12.9
+
+Used docker-compose to orchestrate a Node app and a curl-based tester container.
+
+The app listens on port 8080 and responds with "Hello World".
+
+The tester container confirmed it works by making a request to the app.
+
+Command used:
+docker compose up --build
+
+Output:
+Test passed!
