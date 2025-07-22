@@ -1,0 +1,23 @@
+# Exercise 12.7
+
+# Files created:
+# - package.json (with Express dependency)
+# - index.js (simple Express server)
+
+# Dockerfile used:
+FROM node:18
+WORKDIR /usr/src/app
+COPY package.json ./
+RUN npm install
+COPY index.js .
+EXPOSE 8080
+CMD ["npm", "start"]
+
+# Build image:
+docker build -t web-hello .
+
+# Run container:
+docker run -p 8080:8080 web-hello
+
+# Open http://localhost:8080
+# Output: Hello World!
