@@ -1,0 +1,26 @@
+# Exercise 12.8
+
+# test.sh:
+#!/bin/sh
+RESPONSE=$(curl -s http://host.docker.internal:8080)
+if [ "$RESPONSE" = "Hello World!" ]; then
+  echo "Test passed!"
+  exit 0
+else
+  echo "Test failed. Got: $RESPONSE"
+  exit 1
+fi
+
+# Dockerfile:
+FROM curlimages/curl:8.8.0
+COPY test.sh /test.sh
+CMD ["/test.sh"]
+
+# Build:
+docker build -t express-tester .
+
+# Run (on Windows/Mac):
+docker run --network="host" express-tester
+
+# Result:
+Test passed!

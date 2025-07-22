@@ -1,0 +1,4 @@
+FROM curlimages/curl:8.8.0
+
+COPY test.sh /test.sh
+CMD ["/test.sh"]
