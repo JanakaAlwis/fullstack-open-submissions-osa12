@@ -1,0 +1,19 @@
+# Exercise 12.5
+
+# Create Dockerfile and index.js:
+console.log("Hello World");
+
+# Dockerfile:
+FROM node:18
+WORKDIR /usr/src/app
+COPY index.js .
+CMD ["node", "index.js"]
+
+# Build image:
+docker build -t hello-node .
+
+# Run container:
+docker run hello-node
+
+# Output:
+# Hello World
