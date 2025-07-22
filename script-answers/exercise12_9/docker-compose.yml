@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    container_name: express-app
+    ports:
+      - "8080:8080"
+
+  tester:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    container_name: express-tester
+    depends_on:
+      - app
