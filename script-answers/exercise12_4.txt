@@ -1,0 +1,17 @@
+# Exercise 12.4
+
+# Start the container
+docker start -i zealous_wescoff
+
+# Inside the container:
+apt-get update
+apt-get install -y nodejs npm
+node -v
+npm -v
+node /usr/src/app/index.js
+
+# Output:
+# Hello World
+
+# Exit the container
+exit
